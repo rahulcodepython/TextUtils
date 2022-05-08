@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rahulcodepython/TextUtils_Rahul.git/static/css/main.561c7b2a.css",
+    "main.js": "/rahulcodepython/TextUtils_Rahul.git/static/js/main.b6e820f1.js",
+    "static/js/787.28cb0dcd.chunk.js": "/rahulcodepython/TextUtils_Rahul.git/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/rahulcodepython/TextUtils_Rahul.git/index.html",
+    "main.561c7b2a.css.map": "/rahulcodepython/TextUtils_Rahul.git/static/css/main.561c7b2a.css.map",
+    "main.b6e820f1.js.map": "/rahulcodepython/TextUtils_Rahul.git/static/js/main.b6e820f1.js.map",
+    "787.28cb0dcd.chunk.js.map": "/rahulcodepython/TextUtils_Rahul.git/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.561c7b2a.css",
+    "static/js/main.b6e820f1.js"
+  ]
+}
