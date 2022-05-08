@@ -4,35 +4,39 @@ import Preview from "./Preview";
 export default function Textbox(props) {
     const handleUpperCase = () => {
         setText(text.toUpperCase());
+        props.alert("Converted to uppercase.", "success");
     };
 
     const handleLowerCase = () => {
         setText(text.toLowerCase());
+        props.alert("Converted to lowercase.", "success");
     };
 
     const handleCaptitalize = () => {
         const firstLetter = text[0].toUpperCase();
-
         const otherLetters = text.slice(1).toLowerCase();
-
         const finalLetters = firstLetter.concat(otherLetters);
-
         setText(finalLetters);
+        props.alert("Capitalized the first letter of the given text.", "success");
+
     };
 
     const handleRemoveSpaces = () => {
-        let newText = text.split(/[  ]+/)
+        let newText = text.split(/[  ]+/);
         setText(newText.join(" "));
+        props.alert("Extra spaces are removed.", "success");
     };
 
     const handleDelete = () => {
         setText("");
+        props.alert("Text box is cleared.", "success");
     };
 
     function handleCopy() {
         let copyText = document.getElementById("exampleFormControlTextarea1");
         copyText.select();
         navigator.clipboard.writeText(copyText.value);
+        props.alert("Copy to clipboard.", "success");
     }
 
     const handleOnChange = (event) => {
@@ -42,8 +46,12 @@ export default function Textbox(props) {
     const [text, setText] = useState("");
 
     return (
-        <div className="container mb-3 my-4">
-            <label htmlFor="exampleFormControlTextarea1" className="form-label fs-2" style={{"color": props.color}}>
+        <div className="container mb-3 my-4 text-center">
+            <label
+                htmlFor="exampleFormControlTextarea1"
+                className="form-label fs-2"
+                style={{ color: props.color }}
+            >
                 {props.title}
             </label>
             <textarea
@@ -53,7 +61,7 @@ export default function Textbox(props) {
                 value={text}
                 onChange={handleOnChange}
                 style={{
-                    backgroundColor: props.color==='black'?'white':'black',
+                    backgroundColor: props.color === "black" ? "white" : "black",
                     color: props.color,
                 }}
             ></textarea>
@@ -67,7 +75,10 @@ export default function Textbox(props) {
                 <button className="btn btn-success my-2" onClick={handleCaptitalize}>
                     Captitalize
                 </button>
-                <button className="btn btn-success my-2 mx-2" onClick={handleRemoveSpaces}>
+                <button
+                    className="btn btn-success my-2 mx-2"
+                    onClick={handleRemoveSpaces}
+                >
                     Remove Extra Spaces
                 </button>
                 <button className="btn btn-success my-2" onClick={handleDelete}>
@@ -77,7 +88,7 @@ export default function Textbox(props) {
                     Copy
                 </button>
             </div>
-            <Preview text={text} color={props.color}/>
+            <Preview text={text} color={props.color} />
         </div>
     );
 }
