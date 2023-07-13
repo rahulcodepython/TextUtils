@@ -35,14 +35,9 @@ export default function Navbar(props) {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about">
-                                About
-                            </Link>
-                        </li>
-                        <li className="nav-item">
                             <a className="nav-link" href="#">
                                 <span className="material-icons" onClick={props.mode}>
-                                    {props.theme==='light'?'dark_mode':'light_mode'}
+                                    {props.theme === 'light' ? 'dark_mode' : 'light_mode'}
                                 </span>
                             </a>
                         </li>
